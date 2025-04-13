@@ -82,7 +82,7 @@ export default function Enquire() {
       <p className="mb-8 text-base text-gray-300 max-w-xl">
         Based in St. Albans.
         <br />
-        Contact us using one of the methods below if you're interested in
+        Contact us using one of the methods below if you&apos;re interested in
         joining.
       </p>
 

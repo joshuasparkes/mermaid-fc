@@ -23,7 +23,7 @@ export default function HistoryPage() {
           club has seen generations of players don the famous colours...
         </p>
         <p>
-          [Add more paragraphs about the club's formation, key milestones,
+          [Add more paragraphs about the club&apos;s formation, key milestones,
           memorable seasons, etc. here.]
         </p>
       </div>
