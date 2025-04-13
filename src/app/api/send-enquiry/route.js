@@ -1,12 +1,12 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-// Instantiate Resend with the API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = "joshsparkes6@gmail.com"; // Your receiving email address
 const fromEmail = "onboarding@resend.dev"; // Resend's test email address
 
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     // 1. Check if API key is available
     if (!process.env.RESEND_API_KEY) {

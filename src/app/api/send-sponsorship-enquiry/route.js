@@ -1,12 +1,13 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-// Ensure these are set correctly
+// const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = "joshsparkes6@gmail.com"; // Recipient email
 const fromEmail = "onboarding@resend.dev"; // Sending email (verified or Resend's test)
 
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     if (!process.env.RESEND_API_KEY) {
       console.error("Resend API key is missing for sponsorship enquiry.");
