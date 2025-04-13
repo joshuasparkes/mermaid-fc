@@ -42,7 +42,7 @@ export default function LeagueTable() {
       {" "}
       {/* Add some container styling */}
       <h2 className="text-lg text-black font-semibold mb-3 p-3 bg-gray-100 border-b">
-        League Table
+        Hertfordshire 1961 Sunday Football League
       </h2>{" "}
       {/* Component Title */}
       <div className="p-3">
