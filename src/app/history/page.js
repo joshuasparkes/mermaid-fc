@@ -11,7 +11,7 @@ const honorsData = [
 
 export default function HistoryPage() {
   return (
-    <main className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <main className="container bg-black mx-auto px-4 py-8 md:py-12 lg:py-16">
       <h1 className="text-3xl md:text-4xl font-bold font-heading text-center text-gray-200 mb-8 md:mb-10">
         Our History
       </h1>
@@ -28,7 +28,7 @@ export default function HistoryPage() {
         </p>
       </div>
 
-      <section className="mt-12 md:mt-16">
+      <section className="mt-12  md:mt-16">
         <h2 className="text-2xl md:text-3xl font-bold font-heading text-center text-gray-200 mb-8">
           Club Honours
         </h2>

@@ -7,7 +7,7 @@ export default function SocialsPage() {
   const instagramProfileUrl = "https://www.instagram.com/mermaidfc_/";
 
   return (
-    <main className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <main className="container bg-black mx-auto px-4 py-8 md:py-12 lg:py-16">
       <h1 className="text-3xl md:text-4xl font-bold font-heading text-center text-gray-200 mb-10 md:mb-12">
         Follow Us on Social Media
       </h1>

@@ -3,12 +3,81 @@ import Link from "next/link"; // Import Link component for navigation
 
 export default function PlayerPackagePage() {
   return (
-    <main className="container mx-auto px-4 py-8 md:py-12">
-      <h1 className="text-4xl font-bold font-heading text-center text-orange-500 mb-8 md:mb-12">
+    <main className="container bg-black mx-auto px-4 py-8 md:py-12">
+      <h1 className="text-4xl font-bold font-heading text-center text-white mb-8 md:mb-12">
         Our Player Package
       </h1>
 
+      {/* Subscription Plans Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold font-heading text-center text-white mb-8">
+          Subscription Plans
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Plan 1: Annual */}
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center flex flex-col">
+            <h3 className="text-xl font-semibold text-orange-400 mb-3">
+              Annual
+            </h3>
+            <p className="text-gray-300 text-2xl font-bold mb-2">£228</p>
+            <p className="text-gray-400 text-sm mb-4">
+              (Equivalent to £6 per week)
+            </p>
+            <p className="text-gray-300 text-sm flex-grow">
+              Paid upfront for the entire season.
+            </p>
+            <p className="text-orange-500 text-sm flex-grow">
+              Save 41%!
+            </p>
+          </div>
+
+          {/* Plan 2: Monthly */}
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center flex flex-col">
+            <h3 className="text-xl font-semibold text-orange-400 mb-3">
+              Monthly
+            </h3>
+            <p className="text-gray-300 text-2xl font-bold mb-2">£28</p>
+            <p className="text-gray-400 text-sm mb-4">
+              (Equivalent to £7 per week & £336 a year)
+            </p>
+            <p className="text-gray-300 text-sm flex-grow">
+              Convenient monthly payments via Direct Debit.
+            </p>
+          </div>
+
+          {/* Plan 3: Pay As You Go */}
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center flex flex-col">
+            <h3 className="text-xl font-semibold text-orange-400 mb-3">
+              Pay As You Go
+            </h3>
+            <p className="text-gray-300 text-2xl font-bold mb-2">£8</p>
+            <p className="text-gray-400 text-sm mb-4">Per week</p>
+            <p className="text-gray-400 text-sm mb-4">(Equivalent to £384 per year or £32 a month)</p>
+            <p className="text-gray-300 text-sm flex-grow">
+              Charged weekly for match and training attendance.
+            </p>
+          </div>
+
+          {/* Plan 4: Low Income/Student */}
+          <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center flex flex-col">
+            <h3 className="text-xl font-semibold text-orange-400 mb-3">
+              Supported
+            </h3>
+            <p className="text-gray-300 text-lg font-semibold mb-2">
+              Case-by-Case
+            </p>
+            <p className="text-gray-400 text-sm mb-4">Students / Unemployed</p>
+            <p className="text-gray-300 text-sm flex-grow">
+              We assess low-income situations individually. Please enquire.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <div className="space-y-8">
+      <h2 className="text-3xl font-bold font-heading text-center text-white mb-8">
+          Whats Included
+        </h2>
         {/* Box 1: League Competition */}
         <div className="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6">
           <div className="w-full md:w-1/3 flex-shrink-0">
@@ -66,8 +135,30 @@ export default function PlayerPackagePage() {
             <h2 className="text-2xl font-semibold text-orange-400 mb-3">
               Coaching
             </h2>
-            <p>Training sessions run by licensed UEFA Coaches.</p>
+            <p>In match coaching by our licensed UEFA coaches.</p>
             <p>Focus on player development and tactical understanding.</p>
+          </div>
+        </div>
+
+         {/* Box 4: Nutrition & Fitness */}
+         <div className="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6">
+          <div className="w-full md:w-1/3 flex-shrink-0">
+            <Image
+              src="/powerleague.avif"
+              alt="Fitness and Nutrition Planning"
+              width={200}
+              height={192}
+              className="w-full h-48 object-contain rounded"
+            />
+          </div>
+          <div className="w-full md:w-2/3 text-gray-300">
+            <h2 className="text-2xl font-semibold text-orange-400 mb-3">
+              Weekly Power League League
+            </h2>
+            <p>
+              We also compete in a weekly small sided power league for more game time and skill development.
+            </p>
+            <p>Support to help players maintain peak physical condition.</p>
           </div>
         </div>
 
