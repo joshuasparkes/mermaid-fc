@@ -84,7 +84,13 @@ export default function Navbar() {
   // {{ Define navigation links for reuse }}
   const navLinks = [
     { href: "/history", label: "Our History" },
+    { href: "/player-package", label: "Player Package" },
     { href: "/squad", label: "Our Squad" },
+    {
+      href: "https://app.veo.co/clubs/the-mermaid-fc/recordings/",
+      label: "Watch Matches",
+      external: true,
+    },
     { href: "/socials", label: "Our Socials" },
     { href: "/sponsor", label: "Sponsor Us" },
   ];
@@ -134,19 +140,31 @@ export default function Navbar() {
 
             {/* === Desktop: Center - Navigation Links === */}
             <div className="hidden md:flex flex-1 items-center justify-center space-x-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${
-                    pathname === link.href
-                      ? "text-orange-400" // Active link style
-                      : "text-gray-300 hover:text-white" // Inactive link style
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 text-gray-300 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${
+                      pathname === link.href
+                        ? "text-orange-400"
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
 
             {/* === Desktop: Right - Trial Button === */}
@@ -186,20 +204,33 @@ export default function Navbar() {
           id="mobile-menu"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={handleMobileLinkClick}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === link.href
-                    ? "bg-gray-900 text-orange-400" // Active mobile style
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white" // Inactive mobile style
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleMobileLinkClick}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleMobileLinkClick}
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    pathname === link.href
+                      ? "bg-gray-900 text-orange-400"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       </nav>

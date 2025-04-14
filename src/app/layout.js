@@ -20,6 +20,9 @@ export const metadata = {
   title: "Mermaid FC - St. Albans",
   description:
     "Website for Mermaid FC, playing in the St. Albans Sunday League.",
+  icons: {
+    icon: "/mermaid.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {

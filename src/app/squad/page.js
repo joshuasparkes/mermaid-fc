@@ -11,7 +11,7 @@ const squadData = [
   },
   {
     id: 2,
-    name: "Sim Vilakai Crick",
+    name: "Sim Vilakati",
     position: "Center Midfield",
     imageUrl: "/player.png",
   },

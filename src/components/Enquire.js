@@ -7,6 +7,7 @@ import {
   FaCommentDots,
   FaTimes,
   FaSpinner,
+  FaWhatsapp,
 } from "react-icons/fa"; // Example icons
 
 export default function Enquire() {
@@ -86,12 +87,12 @@ export default function Enquire() {
         joining.
       </p>
 
-      <div className="flex flex-wrap justify-start items-center gap-4 mb-6">
+      <div className="flex flex-wrap justify-start  items-center gap-4 mb-6">
         <a
           href={`mailto:${emailAddress}?subject=${encodeURIComponent(
             emailSubject
           )}`}
-          className="flex items-center bg-black border border-orange-500 text-orange-500 justify-center w-full sm:w-auto px-6 py-3  text-orange-500 rounded-md hover:bg-orange-700 transition duration-200 ease-in-out text-center font-medium shadow-md"
+          className="flex items-center hover:text-white bg-black border border-orange-500 text-orange-500 justify-center w-full sm:w-auto px-6 py-3  text-orange-500 rounded-md hover:bg-orange-700 transition duration-200 ease-in-out text-center font-medium shadow-md"
         >
           <FaEnvelope className="mr-2" />
           Email Us
@@ -99,14 +100,23 @@ export default function Enquire() {
 
         <a
           href={`tel:${phoneNumber}`}
-          className="flex items-center justify-center  w-full sm:w-auto px-6 py-3 bg-black border border-orange-500 text-orange-500 rounded-md hover:bg-orange-700 transition duration-200 ease-in-out text-center font-medium shadow-md"
+          className="flex items-center justify-center hover:text-white  w-full sm:w-auto px-6 py-3 bg-black border border-orange-500 text-orange-500 rounded-md hover:bg-orange-700 transition duration-200 ease-in-out text-center font-medium shadow-md"
         >
           <FaPhone className="mr-2" />
           Call Us
         </a>
+        <a
+          href={`https://wa.me/${phoneNumber.replace("+", "")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center hover:text-white w-full sm:w-auto px-6 py-3 bg-black border border-orange-500 text-orange-500 rounded-md hover:bg-orange-700 transition duration-200 ease-in-out text-center font-medium shadow-md"
+        >
+          <FaWhatsapp className="mr-2" />
+          WhatsApp Us
+        </a>
         <button
           onClick={handleOpenModal}
-          className="flex cursor-pointer items-center justify-center w-full sm:w-auto px-6 py-3 bg-orange-700 text-white rounded-md hover:bg-orange-600 transition duration-200 ease-in-out text-center font-medium shadow-md"
+          className="flex cursor-pointer hover:text-white items-center justify-center w-full sm:w-auto px-6 py-3 bg-orange-700 text-white rounded-md hover:bg-orange-600 transition duration-200 ease-in-out text-center font-medium shadow-md"
         >
           <FaCommentDots className="mr-2" />
           Message Us
