@@ -11,15 +11,15 @@ export default function PlayerPackagePage() {
       {/* Subscription Plans Section */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold font-heading text-center text-white mb-8">
-          Subscription Plans
+          Subscription Plans for 2025/26 for 8 month season
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Plan 1: Annual */}
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center flex flex-col">
             <h3 className="text-xl font-semibold text-orange-400 mb-3">
-              Annual
+              Per Season
             </h3>
-            <p className="text-gray-300 text-2xl font-bold mb-2">£228</p>
+            <p className="text-gray-300 text-2xl font-bold mb-2">£192</p>
             <p className="text-gray-400 text-sm mb-4">
               (Equivalent to £6 per week)
             </p>
@@ -38,7 +38,7 @@ export default function PlayerPackagePage() {
             </h3>
             <p className="text-gray-300 text-2xl font-bold mb-2">£28</p>
             <p className="text-gray-400 text-sm mb-4">
-              (Equivalent to £7 per week & £336 a year)
+              (Equivalent to £7 per week & 224 a year)
             </p>
             <p className="text-gray-300 text-sm flex-grow">
               Convenient monthly payments via Direct Debit.
@@ -52,7 +52,7 @@ export default function PlayerPackagePage() {
             </h3>
             <p className="text-gray-300 text-2xl font-bold mb-2">£8</p>
             <p className="text-gray-400 text-sm mb-4">Per week</p>
-            <p className="text-gray-400 text-sm mb-4">(Equivalent to £384 per year or £32 a month)</p>
+            <p className="text-gray-400 text-sm mb-4">(Equivalent to £256 per year or £32 a month)</p>
             <p className="text-gray-300 text-sm flex-grow">
               Charged weekly for match and training attendance.
             </p>
